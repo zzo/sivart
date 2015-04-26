@@ -26,7 +26,12 @@ POST https://www.googleapis.com/compute/v1/projects/focal-inquiry-92622/zones/us
     }
   ],
   "metadata": {
-    "items": []
+    "items": [
+      {
+         "key": "startup-script-url",
+         "value": "https://raw.githubusercontent.com/zzo/sivart/master/gce/master.startup.sh"
+      }
+    ]
   },
   "tags": {
     "items": [
