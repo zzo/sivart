@@ -1,7 +1,7 @@
-var Server = require('./Server');
-var gce = require('./GCE');
-var Callbacks = require('./Callbacks');
-var port = 3000;
+var Server = require('./lib/Server');
+var gce = require('./lib/GCE');
+var Callbacks = require('./lib/Callbacks');
+var port = 8080;
 
 var callbacks = new Callbacks(gce);
 var server = new Server(callbacks);
