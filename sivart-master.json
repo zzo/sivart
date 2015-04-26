@@ -1,0 +1,55 @@
+POST https://www.googleapis.com/compute/v1/projects/focal-inquiry-92622/zones/us-central1-a/instances
+{
+  "disks": [
+    {
+      "type": "PERSISTENT",
+      "boot": true,
+      "mode": "READ_WRITE",
+      "deviceName": "sivart-master",
+      "autoDelete": true,
+      "initializeParams": {
+        "sourceImage": "https://www.googleapis.com/compute/v1/projects/ubuntu-os-cloud/global/images/ubuntu-1404-trusty-v20150316",
+        "diskType": "https://www.googleapis.com/compute/v1/projects/focal-inquiry-92622/zones/us-central1-a/diskTypes/pd-standard"
+      }
+    }
+  ],
+  "networkInterfaces": [
+    {
+      "network": "https://www.googleapis.com/compute/v1/projects/focal-inquiry-92622/global/networks/default",
+      "accessConfigs": [
+        {
+          "name": "External NAT",
+          "type": "ONE_TO_ONE_NAT",
+          "natIP": "146.148.94.5"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "items": []
+  },
+  "tags": {
+    "items": [
+      "http-server",
+      "https-server"
+    ]
+  },
+  "zone": "https://www.googleapis.com/compute/v1/projects/focal-inquiry-92622/zones/us-central1-a",
+  "canIpForward": false,
+  "scheduling": {
+    "preemptible": false,
+    "automaticRestart": true,
+    "onHostMaintenance": "MIGRATE"
+  },
+  "name": "sivart-master",
+  "machineType": "https://www.googleapis.com/compute/v1/projects/focal-inquiry-92622/zones/us-central1-a/machineTypes/f1-micro",
+  "serviceAccounts": [
+    {
+      "email": "default",
+      "scopes": [
+        "https://www.googleapis.com/auth/devstorage.read_only",
+        "https://www.googleapis.com/auth/logging.write"
+      ]
+    }
+  ]
+}
