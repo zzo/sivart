@@ -5,7 +5,7 @@ POST https://www.googleapis.com/compute/v1/projects/focal-inquiry-92622/zones/us
       "type": "PERSISTENT",
       "boot": true,
       "mode": "READ_WRITE",
-      "deviceName": "sivart-master",
+      "deviceName": "sivert-master",
       "autoDelete": true,
       "initializeParams": {
         "sourceImage": "https://www.googleapis.com/compute/v1/projects/ubuntu-os-cloud/global/images/ubuntu-1404-trusty-v20150316",
@@ -41,14 +41,19 @@ POST https://www.googleapis.com/compute/v1/projects/focal-inquiry-92622/zones/us
     "automaticRestart": true,
     "onHostMaintenance": "MIGRATE"
   },
-  "name": "sivart-master",
+  "name": "sivert-master",
   "machineType": "https://www.googleapis.com/compute/v1/projects/focal-inquiry-92622/zones/us-central1-a/machineTypes/f1-micro",
   "serviceAccounts": [
     {
       "email": "default",
       "scopes": [
-        "https://www.googleapis.com/auth/devstorage.read_only",
-        "https://www.googleapis.com/auth/logging.write"
+        "https://www.googleapis.com/auth/userinfo.email",
+        "https://www.googleapis.com/auth/compute",
+        "https://www.googleapis.com/auth/devstorage.full_control",
+        "https://www.googleapis.com/auth/taskqueue",
+        "https://www.googleapis.com/auth/datastore",
+        "https://www.googleapis.com/auth/logging.admin",
+        "https://www.googleapis.com/auth/cloud-platform"
       ]
     }
   ]
