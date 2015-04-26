@@ -9,6 +9,21 @@ gce.start(function() {
     } else {
       console.log('sivart-master VM created wait for: ');
       console.log('http://146.148.94.5/alive');
+      var seen_output = '';
+      function getout() {
+        gce.getSerialConsoleOutput({ instance: 'sivart-master' }, function(err, total_output) {
+          if (!err) {
+            var contents = total_output.contents;
+            contents.replace(seen_output, '');
+            seen_output += contents;
+            console.log(contents);
+            setTimeout(getout, 5000);
+          } else {
+            console.log('error getting serial console output: ' + err);
+          }
+        });
+      }
+      getout();
     }
   });
 });

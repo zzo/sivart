@@ -5,4 +5,3 @@ git clone https://github.com/zzo/sivart
 cd sivart
 npm install
 nodejs index.js 80
-echo __ALIVE__

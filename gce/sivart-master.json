@@ -4,7 +4,7 @@
       "type": "PERSISTENT",
       "boot": true,
       "mode": "READ_WRITE",
-      "deviceName": "sivert-master",
+      "deviceName": "sivart-master",
       "autoDelete": true,
       "initializeParams": {
         "sourceImage": "https://www.googleapis.com/compute/v1/projects/ubuntu-os-cloud/global/images/ubuntu-1404-trusty-v20150316",
@@ -45,7 +45,7 @@
     "automaticRestart": true,
     "onHostMaintenance": "MIGRATE"
   },
-  "name": "sivert-master",
+  "name": "sivart-master",
   "machineType": "https://www.googleapis.com/compute/v1/projects/focal-inquiry-92622/zones/us-central1-a/machineTypes/f1-micro",
   "serviceAccounts": [
     {
