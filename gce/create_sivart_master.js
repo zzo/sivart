@@ -1,5 +1,8 @@
-gce = require('../lib/GCE');
-fs = require('fs');
+var GCE = require('../lib/GCE');
+var fs = require('fs');
+
+var projectId = 'focal-inquiry-92622';
+var gce = new GCE(projectId);
 
 gce.start(function() {
   var data = fs.readFileSync('sivart-master.json');
