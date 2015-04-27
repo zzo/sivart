@@ -11,8 +11,11 @@
     "express": "^4.12.3",
     "gcloud": "^0.13.2",
     "googleapis": "^2.0.2",
+    "nodegit": "^0.3.3",
     "yaml": "^0.2.3"
   },
   "license": "Apache-2.0",
-  "scripts": {"start": "node server.js"}
+  "scripts": {
+    "start": "node server.js"
+  }
 }

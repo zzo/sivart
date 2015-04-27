@@ -1,9 +1,11 @@
 var Server = require('./lib/Server');
-var gce = require('./lib/GCE');
+var GCE = require('./lib/GCE');
 var Callbacks = require('./lib/Callbacks');
 var port = process.argv[2] || 8080;
+var projectId = 'focal-inquiry-92622';
 
-var callbacks = new Callbacks(gce);
+var gce = new GCE(projectId);
+var callbacks = new Callbacks(gce, { });
 var server = new Server(callbacks);
 
 gce.start(function() {
