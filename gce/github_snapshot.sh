@@ -6,5 +6,4 @@ apt-get install -y git nodejs libwww-perl build-essential
 git clone https://github.com/zzo/sivart
 cd sivart
 npm install
-export NODE_ENV=production
-nodejs server.js 80
+echo __DONE__
