@@ -1,4 +1,5 @@
 var Ins = require('sivart-GCE/Instance');
+/*
 var Auth = require('sivart-GCE/Auth');
 var fs = require('fs');
 var path = require('path');
@@ -25,4 +26,20 @@ github.delete(function(err, resp) {
       });
     }
   });
+});
+*/
+
+var githubServer = Ins.GithubServer();
+githubServer.build(function(err, ok) {
+  if (err) {
+    console.error('Error building github instance');
+    console.error(err);
+  } else {
+    githubServer.tail_gce_console(function(err, data) {
+      console.log(data);
+      if (data.toString().match('__ALIVE__')) {
+        return true;
+      }
+    });
+  }
 });
